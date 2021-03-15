@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" />
 		<!--Replace with your tailwind.css once created-->
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+		<!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'> -->
 		<!-- Define your gradient here - use online tools to find a gradient matching your branding-->
 		<style>
 		  .gradient {
@@ -23,6 +24,54 @@
        					rgb(25 23 24 / 88%) 0%,
        					#ca818e00 100%);
 		  }
+
+		  .flex-container {
+  display: flex;
+}
+
+.flex-container > div {
+  
+  font-size: 30px;
+}
+
+	.img-gal {
+	height: 300px;
+	width: 250px;
+}
+.cardholder {
+  margin-top: 150px;
+    perspective: 600px;
+}
+.card {
+  width: 250px;
+  height: 300px;
+  background-color: transparent;
+          transform: rotateY(50deg);
+  box-shadow: -6px 5px 13px 2px rgba(0, 0, 0, 0.25);
+	transition: all 1s ease;
+  color: transparent;
+}
+.card:hover {
+  width: 250px;
+  height: 300px;
+  background-color: transparent;
+          transform: rotateY(0deg);
+  box-shadow: 0px 0px 36px 2px rgba(0, 0, 0, 0.25);
+  color: black;
+}
+.card:hover p {
+  background-color: white;
+}
+p.desc {
+  z-index:999;
+  position: absolute;
+  top: 10px;
+  padding: 10px;
+}
+p.desc:hover {
+}
+
+
 		</style>
 	</head>
   	<body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
@@ -129,6 +178,53 @@
 		
 	  </div>
 	</section>
+
+	<section class="bg-white border-b py-8 mb-5" >
+		<div class="container max-w-5xl mx-auto m-8">
+		<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+		  Gallery
+		</h1>
+		<div class="row flex-container">
+			<div class="col-md-3">
+			    <div class="cardholder">
+			      	<div class="card">
+			          	<img src="gallery/1.jpeg" class="img-gal" />
+						<p class="desc">SFashion</p>
+			        </div>
+			    </div>
+	    	</div>
+    
+		    <div class="col-md-3">
+		      <div class="cardholder">
+		        <div class="card">
+			          	<img src="gallery/10.jpeg" class="img-gal" />
+						<p class="desc">SFashion</p>
+			        </div>
+		      </div>
+		    </div>
+		    
+		    <div class="col-md-3">
+		      <div class="cardholder">
+		        <div class="card">
+			          	<img src="gallery/12.jpeg" class="img-gal" />
+						<p class="desc">SFashion</p>
+			        </div>
+		      </div>
+		    </div>
+		    
+		    <div class="col-md-3">
+		      <div class="cardholder">
+		        <div class="card">
+			          	<img src="gallery/5.jpeg" class="img-gal" />
+						<p class="desc">SFashion</p>
+			        </div>
+		      </div>
+		    </div>
+		</div>
+					  
+
+			
+	</section>
 	
 	
 	<!-- Change the colour #f8fafc to match the previous section colour -->
@@ -167,6 +263,8 @@
 		Submit
 	  </button>
 	</section>
+
+
 	<!--Footer-->
 	<footer class="bg-white">
 	  <div class="container mx-auto px-8">
